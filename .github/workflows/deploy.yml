@@ -44,17 +44,15 @@ jobs:
       - name: Build Frameworks
         run: |
           cd sakura
-          pwd
           dotnet build
           cd ../sakura-imaging
-          pwd
           dotnet build
           cd ..
 
       - name: Fix Paths and Build DocFX
         run: |
-          pwd
           cd sakura-api-docs
+          docfx docfx.json
           docfx build docfx.json
 
       - name: Setup Pages
