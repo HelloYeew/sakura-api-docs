@@ -1,0 +1,66 @@
+name: Deploy Documentation
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Documentation Repo
+        uses: actions/checkout@v4
+        with:
+          path: sakura-api-docs
+
+      - name: Checkout Framework Core
+        uses: actions/checkout@v4
+        with:
+          repository: HelloYeew/sakura
+          path: sakura
+
+      - name: Checkout Framework Imaging
+        uses: actions/checkout@v4
+        with:
+          repository: HelloYeew/sakura-imaging
+          path: sakura-imaging
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.x
+
+      - name: Install DocFX
+        run: dotnet tool install -g docfx
+
+      - name: Fix Paths and Build DocFX
+        run: |
+          cd sakura-api-docs
+          docfx build docfx.json
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: sakura-api-docs/_site
+    
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
