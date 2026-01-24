@@ -41,6 +41,11 @@ jobs:
       - name: Install DocFX
         run: dotnet tool install -g docfx
 
+      - name: Build Frameworks
+        run: |
+          dotnet build sakura/Sakura.Framework/Sakura.Framework.csproj
+          dotnet build sakura-imaging/Sakura.Framework.Imaging/Sakura.Framework.Imaging.csproj
+
       - name: Fix Paths and Build DocFX
         run: |
           cd sakura-api-docs
