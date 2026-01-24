@@ -1,4 +1,4 @@
 - name: Core
-  href: api/core/Sakura.Framework.yml
+  href: api/core/Sakura.Framework.html
 - name: Imaging
-  href: api/imaging/Sakura.Framework.Imaging.ImageMagick.yml
+  href: api/imaging/Sakura.Framework.Imaging.ImageMagick.html
