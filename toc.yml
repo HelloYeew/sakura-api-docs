@@ -2,3 +2,5 @@
   href: api/core/Sakura.Framework.yml
 - name: Imaging
   href: api/imaging/Sakura.Framework.Imaging.ImageMagick.yml
+- name: Source Generators
+  href: api/sourcegenerators/Sakura.Framework.SourceGenerators.yml

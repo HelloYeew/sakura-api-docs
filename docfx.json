@@ -8,17 +8,27 @@
       }],
       "dest": "api/core",
       "properties": {
-        "TargetFramework": "net9.0"
+        "TargetFramework": "net10.0"
       }
     },
     {
-      "src": [{ 
-        "src": "../sakura-imaging", 
-        "files": ["Sakura.Framework.Imaging/*.csproj"] 
+      "src": [{
+        "src": "../sakura-imaging",
+        "files": ["Sakura.Framework.Imaging/*.csproj"]
       }],
       "dest": "api/imaging",
       "properties": {
-        "TargetFramework": "net9.0"
+        "TargetFramework": "net10.0"
+      }
+    },
+    {
+      "src": [{
+        "src": "../sakura",
+        "files": ["Sakura.Framework.SourceGenerators/*.csproj"]
+      }],
+      "dest": "api/sourcegenerators",
+      "properties": {
+        "TargetFramework": "netstandard2.0"
       }
     }
   ],

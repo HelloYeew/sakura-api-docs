@@ -36,7 +36,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 9.x
+          dotnet-version: 10.x
 
       - name: Install DocFX
         run: dotnet tool install -g docfx
@@ -44,7 +44,8 @@ jobs:
       - name: Build Frameworks
         run: |
           cd sakura
-          dotnet build
+          dotnet build Sakura.Framework/Sakura.Framework.csproj
+          dotnet build Sakura.Framework.SourceGenerators/Sakura.Framework.SourceGenerators.csproj
           cd ../sakura-imaging
           dotnet build
           cd ..
