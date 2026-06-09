@@ -3,4 +3,4 @@
 - name: Imaging
   href: api/imaging/Sakura.Framework.Imaging.ImageMagick.yml
 - name: SPIRV
-  href: api/spirv/toc.yml
+  href: api/spirv/Sakura.Framework.SPIRV.yml
