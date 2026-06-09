@@ -23,16 +23,6 @@
     },
     {
       "src": [{
-        "src": "../sakura",
-        "files": ["Sakura.Framework.SourceGenerators/*.csproj"]
-      }],
-      "dest": "api/sourcegenerators",
-      "properties": {
-        "TargetFramework": "netstandard2.0"
-      }
-    },
-    {
-      "src": [{
         "src": "../sakura-spirv",
         "files": ["Sakura.Framework.SPIRV/*.csproj"]
       }],

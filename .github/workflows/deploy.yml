@@ -51,7 +51,6 @@ jobs:
         run: |
           cd sakura
           dotnet build Sakura.Framework/Sakura.Framework.csproj
-          dotnet build Sakura.Framework.SourceGenerators/Sakura.Framework.SourceGenerators.csproj
           cd ../sakura-imaging
           dotnet build
           cd ../sakura-spirv
