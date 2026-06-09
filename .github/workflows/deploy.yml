@@ -33,6 +33,12 @@ jobs:
           repository: HelloYeew/sakura-imaging
           path: sakura-imaging
 
+      - name: Checkout Framework SPIRV
+        uses: actions/checkout@v4
+        with:
+          repository: HelloYeew/sakura-spirv
+          path: sakura-spirv
+
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
@@ -48,6 +54,8 @@ jobs:
           dotnet build Sakura.Framework.SourceGenerators/Sakura.Framework.SourceGenerators.csproj
           cd ../sakura-imaging
           dotnet build
+          cd ../sakura-spirv
+          dotnet build Sakura.Framework.SPIRV/Sakura.Framework.SPIRV.csproj
           cd ..
 
       - name: Fix Paths and Build DocFX

@@ -30,6 +30,16 @@
       "properties": {
         "TargetFramework": "netstandard2.0"
       }
+    },
+    {
+      "src": [{
+        "src": "../sakura-spirv",
+        "files": ["Sakura.Framework.SPIRV/*.csproj"]
+      }],
+      "dest": "api/spirv",
+      "properties": {
+        "TargetFramework": "net10.0"
+      }
     }
   ],
   "build": {

@@ -4,3 +4,5 @@
   href: api/imaging/Sakura.Framework.Imaging.ImageMagick.yml
 - name: Source Generators
   href: api/sourcegenerators/Sakura.Framework.SourceGenerators.yml
+- name: SPIRV
+  href: api/spirv/Sakura.Framework.SPIRV.yml
