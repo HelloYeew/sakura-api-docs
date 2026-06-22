@@ -10,6 +10,7 @@ This documentation provide an API documentation of [Sakura Framework](https://gi
 
 - [Sakura Framework (Core)](https://github.com/HelloYeew/sakura)
 - [Sakura Imaging (Image Processing Extension)](https://github.com/HelloYeew/sakura-imaging)
+- [Sakura SPIRV](https://github.com/HelloYeew/sakura-spirv)
 
 ## Generating Documentation
 

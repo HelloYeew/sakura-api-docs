@@ -61,6 +61,7 @@
       "_appTitle": "Sakura Framework",
       "_nestedNamespaces": true,
       "_enableSearch": true,
+      "_appLogoPath": "images/icon.png",
       "pdf": false
     }
   }
